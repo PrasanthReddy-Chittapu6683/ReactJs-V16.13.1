@@ -1,1 +1,0 @@
-Hello PRCV : Its React Js tutorial from scratch 

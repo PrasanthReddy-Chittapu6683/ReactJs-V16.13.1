@@ -1,0 +1,102 @@
+What is React?
+    => Open source library fro building the User interfaces
+    => Its not a framework.
+    => Focus only on UI which can build only Rich HTML interfaces.
+    => Rich Ecosystem: To build Routing, Http services react will support to import the library's.
+    => It's a Component Based Architecture
+    => React is declaritive
+    => React can integrative with any other page of Angular or Veu.js.
+   
+JavaScripts:
+   => 'this' keyword, filter, map and reduce
+ES6: 
+   => let & const, arrow functions, template literals, default parameters, object literals, rest 
+    and spread operators and destructing assignment
+
+Create App:
+    => npx create-react-app reactJs0816  (or) => npm install create-react-app -g
+                                              => create-react-app <project-nameXXXXX>
+        This will create new application of ReactJs modules inside reactJs0816 folder
+        npx is the npm package runner when we install npm
+    => npm start 
+        This will run the application on default port 3000
+
+Folder Strructure:
+    => package.json:
+        It contains dependencys of the projects
+        Helps to run and install the application.
+    => public:
+        It contails 3 files.
+            manifest.json -> It conserned about progressive webapps
+            index.html -> This is the only 1 html file will have in our application(SPA). View will dynamically generates using this file.
+                          Mostly will not do any changes in this file.
+                          React want control UI so it will have 1 tag <div id='root'></div> 
+                          Runtime react take this div tag and its responsible to UI
+    => src:
+        Will Create all our Components in this folder.
+        By default it will create some files inside this.
+        Starting point of our application is index.js
+        
+        => index.js:
+            - In this we specify the root Component ie., `App` Component & DOM element (`root' which is the id in index.html) which will be controller by react
+                Ex:
+                    ReactDOM.render( <React.StrictMode> <App /> </React.StrictMode>, document.getElementById('root'));
+                    This will render the HTML in root id div tag which ever we repersent in App Component(App.js file).
+        => App.js:
+            - It responsible to display the HTML in browser
+        => App.css:
+            - Helps to repersent the sytles
+        => App.test.js:
+            - Helps to write Unit test cases.
+        => serviceWorker.js:
+            - This is responsible for progressive webapps.
+
+Rending the React appliction in Browser:
+    => When we run the `npm start ` command:
+        - index.html file will serve in the browser. This file contails div tag with `root` id
+        - Next it wil enters in to index.js. ReactDOM renders the App Component in to `root` node
+        - App.js (AppComponent) contains HTML which display's in browser.
+
+What is Component?
+    => In React we have main root Component ie., App Component (App.js) 
+    => In React 1 Component contain other Component.
+    => Reusable
+    => Component code place the code in JavaScript file(App.js). We can have Component with .JSX file extensions.
+    => We have two different types of Components:
+        1) Stateless Functional Component:
+            ->  This are JavaScript functions.
+            -> It returns HTML code to display in UI
+                Ex:
+                    function welcome(props) {
+                        return `<h1> Hello, {props.name} </h1>
+                    }
+        2) Stateful Class Component:
+            -> Its a regular ES6 class that extends `React.Component` class.
+            -> `render` method is manditory to return HTML.
+                Ex:
+                    class welcome extends React.Component {
+                        render()  {
+                            return `<h1>Hi PRCV</h1>`;
+                        }
+                    }
+Functional Components:
+    => These are just JavaScript function.
+    => They can optonally receive the input Properties called as `props` and returns the output as HTML(JSX).
+
+Class Components: 
+    => These are basically ES6 classes
+    => It also receives the input Properties called as `props` and returns the output as HTML(JSX).
+    => Apart from props, this class contains private Internal states(means, This class contains its private information which can use to display in the UI).
+	=> While creating the class Component we need to import two classes from react
+        import React, {Component} from 'react';
+    => Class should export Component
+            class ClassComponentTwo extends Component{
+            }
+    => Class has to implement render() which returns null or HTML 
+
+
+
+
+
+
+
