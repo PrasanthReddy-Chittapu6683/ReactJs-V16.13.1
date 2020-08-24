@@ -6,9 +6,11 @@ What is React?
     => It's a Component Based Architecture
     => React is declaritive
     => React can integrative with any other page of Angular or Veu.js.
+
    
 JavaScripts:
    => 'this' keyword, filter, map and reduce
+   
 ES6: 
    => let & const, arrow functions, template literals, default parameters, object literals, rest 
     and spread operators and destructing assignment
@@ -79,11 +81,16 @@ What is Component?
                             return `<h1>Hi PRCV</h1>`;
                         }
                     }
-Functional Components:
+Functional Components:(Stateless / Dumb / Presentational Components)
     => These are just JavaScript function.
     => They can optonally receive the input Properties called as `props` and returns the output as HTML(JSX).
+    => Need to use mostly Functional Components. 
+    => Advantage of the Functional Component over Class Component is `this` keyword will not be there.
+    => Wth out using the `State` we can develop the application
+    => Mainly responsible for UI
+    Refer: FunctionalComponentOne.js
 
-Class Components: 
+Class Components: (Stateful / Smart / Container) 
     => These are basically ES6 classes
     => It also receives the input Properties called as `props` and returns the output as HTML(JSX).
     => Apart from props, this class contains private Internal states(means, This class contains its private information which can use to display in the UI).
@@ -92,9 +99,140 @@ Class Components:
     => Class should export Component
             class ClassComponentTwo extends Component{
             }
-    => Class has to implement render() which returns null or HTML 
+    => Class has to implement render() which returns null or HTML
+    => There are bit more Feature Rich.
+    => Here we can maintain thier own private data also called as `state`.
+    => They can contain complex logics
+    => It provides Life Cycle Hooks.
+    Refer: ClassComponentOne.js
+
+Version React 16.7+:
+    => From this version, Functional Components are no more Stateless Components. They introduced HOOKS. 
+    => States & HOOKS can use in the Functional Components aswelll.
+    => 
+
+ What is JSX (JavaScript XML) ?
+    => Its an extention of JavaScript language syntax
+    => We can write XML like code for elements and Components.
+    => JSX tags have a tag name, attributes and Children.
+    => JSX make react code simplier and easy.
+    => JSX ultimately transpiles to pure JavaScript which is understood by the browsers.
+    => In JSX some of the things got replaced compare the JavaScript ie.,
+        - Class => className
+        - for => htmlFor
+        - camelCase prorperty naming convention
+           -- onclick => onClick
+           -- tabindex => tabIndex 
+    Refer: FunctionalComponentOne.js
+        JSX Syntax:
+             return (
+                <div className="dummyClass">
+                    <p> This is from JSX retrun function.</p>
+                </div>
+            )
+        JavaScript Syntax:
+             return React.createElement('div',
+                { id: 'PRCV', className: 'dummyClass' },
+                React.createElement(
+                    'b',
+                    null,
+                    "This is from JavaScript return function: Inspect this line for added the attributesfor this element"));
+
+Props (Properties):
+    => Compoents are reusable by imortig Compoent from 'react'
+    => Props are optional input that Compoent can accept.
+    => Props can allows the Compoent to be dynamic.
+    => Props is readonly property. Cannot change or assign the value in Component class.
+    Refer: PropsFour.js
+        Ex:
+            In HTML add the attributes:
+             <PropsComponent name='PRCV'></PropsComponent>
+            In Compoents add the parameters to the class `props`. In `props` will have HTML element attribute details
+                const PropsComponent = (props) => {
+                    return <div> Hi <b> {props.name}</b>,This is displaying using the name attribute in HTML and reading using `props` in component : </div>
+                }
+    => Using props, we can read the child element which is inside the component class name element
+        Ex:
+            Html:
+                 <PropsComponent name='Tanxz' turotrialName="Vue">
+                    <p>
+                        This is childern Props
+                    </p>
+                </PropsComponent>      
+            Compoent Class:
+                const PropsComponent = (props) => {
+                    return (<div> Hi
+                        <b> {props.name}</b>,
+                        This is displaying using the name attribute in HTML and reading using `props` in component using
+                        <b> {props.turotrialName} </b>
+                        {props.children}
+                    </div>);
+                }
 
 
+State: 
+    => State is managed with in the components.
+    => variables declared in the fnction body
+    => state is managed with in the component and having full control that can be changed ie., State is mutable.
+    => Functional Compoents: useState Hook.
+    => Class Compoents: this.state.
+    => this.state can be used only in costructor to initialize the value or property.
+    Refer: stateExampleFive.js
+
+setState:
+    => This is used to update or change the value of state using setState function
+        Ex:
+             this.setState({
+                count: this.state.count + 1
+            })
+    => Suppose, if we want to update any code after executing the setState method, we have two parameters in setState   
+        1st parameter: to set the values
+        2nd parameter: set callback
+        Ex:
+            this.setState({
+                count: this.state.count + 1
+            },
+                ()=> {
+                    console.log('Call Back')
+                }
+            )
+    => If we add multiple setState() objects it will group to single setState() object while executing.
+        Ex:
+             IncFive = () => {
+                this.IncFiveTimes();
+                this.IncFiveTimes();
+                this.IncFiveTimes();
+                this.IncFiveTimes();
+                this.IncFiveTimes();
+            }
+    => If we need to call and execute inside code all 5 times we need to pass an argument instead of regular object, below syntax:
+        Ex:
+             IncFiveTimes = () => {
+                this.setState(prevState => ({
+                    count: prevState.count + 1
+                }))
+            }
+
+Destructing props and state:
+    => Inn ES6 we can destructing the props and states objects
+    => Destructing impoves code readiability
+    => Destructing by passing the parameter, instead of using props in FunctionalComponents
+        Ex:const destructing = ({name,heroName }) => {
+            retrun(
+                <div>
+                    Hi {name} from {heroName}
+                </div>
+            )
+        }
+    Refer: DestructuringPropsStates7.js
+
+    
+Event Handling:
+    => 
+    Refer: EventHandling8.js
+
+Methods as props:
+    => How to pass data or call the function from child  copoment to parent component using props?
 
 
 
