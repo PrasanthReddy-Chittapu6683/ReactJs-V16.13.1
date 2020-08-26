@@ -5,7 +5,7 @@ class MethodsAsPropsParent9 extends Component {
         super(props)
 
         this.state = {
-            message: 'Hello'
+            message: 'Hello PRCV'
         }
         this.clcikinParent = this.clcikinParent.bind(this)
     }
@@ -14,17 +14,18 @@ class MethodsAsPropsParent9 extends Component {
             message: `Goobye from ${messageFromChild}`
         })
     }
+
     reset = () => {
         this.setState({
-            message: `Hello`
+            message: `Hello PRCV`
         })
     }
     render() {
 
         return (
             <div>
-                <MethodsAsPropsChild9 fromParent={this.clcikinParent}></MethodsAsPropsChild9>
-                {this.state.message}
+                <MethodsAsPropsChild9 fromParent={this.clcikinParent} prcv={this.state.message}></MethodsAsPropsChild9>
+             In Parent Component: ` {this.state.message}`
                 <button onClick={() => this.reset()}>Reset</button>
             </div>
         )

@@ -1,0 +1,9 @@
+.success {
+    color: green;
+    font-style: italic;
+    font-size: 15px;
+}
+.danger {
+    color: red;
+    font-style: italic;
+}
