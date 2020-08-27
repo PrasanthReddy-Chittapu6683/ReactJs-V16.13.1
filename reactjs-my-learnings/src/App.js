@@ -37,6 +37,8 @@ import RenderPropsHover24 from './components/RenderProps/RenderPropsHover24';
 import CommonSharedRenderProps24 from './components/RenderProps/CommonSharedRenderProps24';
 import ComponentC25 from './components/ReactContext/ComponentC25'
 import { UserProvider, ThemeProvider } from './components/ReactContext/MainContext25';
+import GetList26 from './components/HTTPExample/GetList26';
+import PostForm26 from './components/HTTPExample/PostForm26';
 
 
 
@@ -248,6 +250,14 @@ function App() {
               <ComponentC25></ComponentC25>
             </UserProvider>
           </ThemeProvider>
+        </li>
+        <li>
+          <h2>HTTP GET Services</h2>
+          <GetList26></GetList26>
+        </li>
+        <li>
+          <h2>HTTP POST Services</h2>
+          <PostForm26></PostForm26>
         </li>
       </ul>
 

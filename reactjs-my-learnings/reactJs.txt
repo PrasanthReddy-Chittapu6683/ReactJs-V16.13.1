@@ -722,9 +722,14 @@ HTTP:
         - Add axios package to the application using npm commmand
             `npm install axios`
         - Once this is installed it will add it in package.json -> dependencies 
+    => For practice use online API's to get the data (https://jsonplaceholder.typicode.com/)
+    => HTTP calls will place in componentDidMount() methods. because this will loads only once while loading the component during the lifecycle
+     Refer:
+        GetList26.js
+        PostForm26.js
 
-
-
+***************This is the basic React Features covered as per the React Offical doumentation *********************
+*************** Next will Go to React HOOKS *********************
 
 
 
