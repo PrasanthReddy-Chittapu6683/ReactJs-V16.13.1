@@ -32,14 +32,14 @@
 * Helps to run and install the application.
 
 #### public:
-* It contails 3 files.
-   *  __manifest.json__ : It is conserned about progressive webapps
-   *  __index.html__: 
+It contails 3 files.
+*  __manifest.json__ : It is conserned about progressive webapps
+*  __index.html__: 
      *  This is the only 1 html file will have in our application(SPA). View will dynamically generates using this file.
      *  Mostly will not do any changes in this file.
      *  If React want control UI it will have 1 tag __`<div id='root'></div>`__ 
      *  Runtime react take this div tag and its responsible to UI
-   *  __src__: 
+*  __src__: 
      *  Will Create all our Components in this folder.
      *  By default it will create some files inside this.
      *  Starting point of the application is __index.js__
