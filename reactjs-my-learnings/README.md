@@ -31,7 +31,7 @@
 * It contains dependencys of the projects
 * Helps to run and install the application.
 
-#### public:
+#### public(folder):
 It contails 3 files.
 *  __manifest.json__ : It is conserned about progressive webapps
 *  __index.html__: 
@@ -43,7 +43,10 @@ It contails 3 files.
      *  Will Create all our Components in this folder.
      *  By default it will create some files inside this.
      *  Starting point of the application is __index.js__
-   
+*   __index.js__:
+      * In this we specify the root Component ie., `App` Component & DOM element (`root' which is the id in index.html) which will be controller by react
+        *  Ex: ReactDOM.render( <React.StrictMode> <App /> </React.StrictMode>, document.getElementById('root'));
+                    This will render the HTML in root id div tag which ever we repersent in App Component(App.js file).
    
  
  
