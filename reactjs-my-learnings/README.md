@@ -1,4 +1,68 @@
 
+  
+## What is React?
+* Open source library for building the User interfaces
+* Its not a framework.
+* Focus only on UI which can build only Rich HTML interfaces.
+* Rich Ecosystem: To build Routing, Http services react will support to import the library's.
+* It's a Component Based Architecture
+* React is declaritive
+* React can integrative with any other page like Angular or Veu.js.
+
+### Prerequiste for React JS :
+  * JavaScripts:
+    * 'this' keyword, filter, map and reduce
+  * ES6+:
+    * let & const, arrow functions, template literals, default parameters, object literals, rest 
+    and spread operators and destructing assignment
+
+## Create new React JS Application:
+* __`npx create-react-app reactJs0816`__  (or) 
+    * `npm install create-react-app -g`
+    * `create-react-app <project-nameXXXXX>`
+* This will create new application of ReactJs modules inside reactJs0816 folder
+* `npx` is the npm package runner when we install npm
+* `npm start` 
+* This will run the application on default port 3000
+
+## Folder Structure:
+
+#### package.json:
+* It contains dependencys of the projects
+* Helps to run and install the application.
+
+#### public:
+* It contails 3 files.
+   *  __manifest.json__ : It is conserned about progressive webapps
+   *  __index.html__: 
+        *This is the only 1 html file will have in our application(SPA). View will dynamically generates using this file.
+        *Mostly will not do any changes in this file.
+        *If React want control UI it will have 1 tag __`<div id='root'></div>`__ 
+        *Runtime react take this div tag and its responsible to UI
+   *  __src__: 
+     *Will Create all our Components in this folder.
+     *By default it will create some files inside this.
+     *Starting point of the application is __index.js__
+   
+   
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
