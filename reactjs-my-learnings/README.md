@@ -44,18 +44,17 @@ It contails 3 files.
      *  By default it will create some files inside this.
      *  Starting point of the application is __index.js__
 *   __index.js__:
-      * In this we specify the root Component ie., `App` Component & DOM element (`root' which is the id in index.html) which will be controller by react
-        *  Ex: 
-          ``` javascript
+    * In this we specify the root Component ie., `App` Component & DOM element (`root` which is the id in index.html) which will be controller by react)
+        ``` JavaScript
             ReactDOM.render( 
               <React.StrictMode>
                 <App /> 
                </React.StrictMode>,
                document.getElementById('root')
              );
-             ``` javascript
+         ``` JavaScript
              
-          *  This will render the HTML in root id div tag which ever we repersent in App Component(App.js file).
+        
    
  
  
