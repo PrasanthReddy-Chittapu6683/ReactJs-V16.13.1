@@ -89,6 +89,11 @@ Functional Components:(Stateless / Dumb / Presentational Components)
     => Wth out using the `State` we can develop the application
     => Mainly responsible for UI
     Refer: FunctionalComponentOne.js
+    
+Version React 16.7+:
+    => From this version, Functional Components are no more Stateless Components. They introduced HOOKS. 
+    => States & HOOKS can use in the Functional Components aswelll.
+    => This makes more easier than Class Components
 
 Class Components: (Stateful / Smart / Container) 
     => These are basically ES6 classes
@@ -106,10 +111,7 @@ Class Components: (Stateful / Smart / Container)
     => It provides Life Cycle Hooks.
     Refer: ClassComponentOne.js
 
-Version React 16.7+:
-    => From this version, Functional Components are no more Stateless Components. They introduced HOOKS. 
-    => States & HOOKS can use in the Functional Components aswelll.
-    => 
+
 
  What is JSX (JavaScript XML) ?
     => Its an extention of JavaScript language syntax
@@ -139,7 +141,7 @@ Version React 16.7+:
                     "This is from JavaScript return function: Inspect this line for added the attributesfor this element"));
 
 Props (Properties):
-    => Compoents are reusable by imortig Compoent from 'react'
+    => Compoents are reusable by importig Compoent from 'react'
     => Props are optional input that Compoent can accept.
     => Props can allows the Compoent to be dynamic.
     => Props is readonly property. Cannot change or assign the value in Component class.
@@ -172,7 +174,7 @@ Props (Properties):
 
 State: 
     => State is managed with in the components.
-    => variables declared in the fnction body
+    => variables declared in the function body
     => state is managed with in the component and having full control that can be changed ie., State is mutable.
     => Functional Compoents: useState Hook.
     => Class Compoents: this.state.
@@ -228,7 +230,21 @@ Destructing props and state:
 
     
 Event Handling:
-    => 
+    =>  render() {
+            return (
+                <div>
+                    <button onClick={() => this.onclickeve()}>click</button>
+                    <div>{this.state.message}</div>
+                </div>
+            )
+         }
+
+        onclickeve = () => {
+            console.log("Hi, ClassComp Click event")
+            this.setState({
+                message :' Good bye'
+            })
+        }
     Refer: EventHandling8.js
 
 Methods as props:

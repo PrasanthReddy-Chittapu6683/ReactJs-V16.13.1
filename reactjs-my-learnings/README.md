@@ -45,14 +45,16 @@ It contails 3 files.
      *  Starting point of the application is __index.js__
 *   __index.js__:
     * In this we specify the root Component ie., `App` Component & DOM element (`root` which is the id in index.html) which will be controller by react)
-        ``` JavaScript
+    ```JavaScript
+
             ReactDOM.render( 
               <React.StrictMode>
                 <App /> 
                </React.StrictMode>,
                document.getElementById('root')
              );
-         ``` JavaScript
+
+      ```JavaScript
              
         
    
@@ -62,8 +64,32 @@ It contails 3 files.
  
 
 
-
-
+#### What is Component?
+  * In React we have main root Component ie., App Component (App.js) 
+  * In React 1 Component contain other Component.
+  * Reusable
+  * Component code place the code in JavaScript file(App.js). We can have Component with .JSX file extensions.
+  * We have 2 different types of Components:
+      1) __`Stateless Functional Component`__:
+          * This are JavaScript functions.
+          * It returns HTML code to display in UI
+            Ex:
+                ```javascript
+                    function welcome(props) {
+                        return `<h1> Hello, {props.name} </h1>
+                    }
+            ```javascript
+      2) __`Stateful Class Component`__:
+          *  Its a regular ES6 class that extends `React.Component` class.
+          * `render` method is manditory to return HTML.
+              ```javascript  
+              
+                    class welcome extends React.Component {
+                        render()  {
+                            return `<h1>Hi PRCV</h1>`;
+                        }
+                    }
+            ```javascript
 
 
 
