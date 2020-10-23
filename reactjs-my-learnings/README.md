@@ -54,7 +54,7 @@ It contails 3 files.
                document.getElementById('root')
              );
 
-      ```JavaScript
+    ```JavaScript
              
         
    
@@ -74,7 +74,7 @@ It contails 3 files.
           * This are JavaScript functions.
           * It returns HTML code to display in UI
             Ex:
-                ```javascript
+            ```javascript
                     function welcome(props) {
                         return `<h1> Hello, {props.name} </h1>
                     }
