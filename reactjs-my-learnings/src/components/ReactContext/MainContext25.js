@@ -9,5 +9,6 @@ const UserConsumer = UserContext.Consumer;
 const ThemeProvider = ThemeContext.Provider;
 const ThemeConsumer = ThemeContext.Consumer;
 
-export { UserProvider, UserConsumer ,ThemeProvider ,ThemeConsumer}
+export { UserProvider, UserConsumer, ThemeProvider, ThemeConsumer, ThemeContext }
 export default UserContext;
+

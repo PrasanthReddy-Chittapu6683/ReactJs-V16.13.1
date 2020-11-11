@@ -14,6 +14,7 @@ class FormHandling extends Component {
         this.setState({
             username: event.target.value
         })
+
     }
     descChangeEvent = event => {
         this.setState({
@@ -35,7 +36,7 @@ class FormHandling extends Component {
                 <form onSubmit={this.submitClick}>
                     <div>
                         <label> Username:</label>
-                        <input type="text" value={this.state.username} onChange={this.usernameChangeevent}></input>
+                        <input type="text" value={this.state.username} onChange={this.usernameChangeevent}></input> {this.state.username11}
                     </div>
                     <div>
                         <label> Description:</label>

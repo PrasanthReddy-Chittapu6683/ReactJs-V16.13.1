@@ -201,7 +201,7 @@ function App() {
           <h2>Error Handling </h2>
           <small> To view the error add heroName="Joker" in App.js file  </small>
           <Errorboundry22>
-            <ErrorHandling22 heroName="Batman"></ErrorHandling22>
+            <ErrorHandling22 heroName="Joker"></ErrorHandling22>
           </Errorboundry22>
 
           <Errorboundry22>
@@ -246,7 +246,7 @@ function App() {
         <li>
           <h2>React Context</h2>
           <ThemeProvider value='Ligh Dark theme'>
-            <UserProvider value='PRCV'>
+            <UserProvider value='PRCVvvvvvvvvvvvvvvvvvvvvvvvvv'>
               <ComponentC25></ComponentC25>
             </UserProvider>
           </ThemeProvider>

@@ -12,11 +12,13 @@ const PropsFunctinalComponent = (props) => {
 
 class PropsUsingClassComponent extends Component {
 
+
+
     render() {
-        return (<div> Hey {this.props.name},This is Prop Class Component in {this.props.turotrialName} 
-          { this.props.children }
+        return (<div> Hey {this.props.name},This is Prop Class Component in {this.props.turotrialName}
+            { this.props.children}
         </div>
-      
+
         )
     }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MainHOCCounte23 from './MainHOCCounte23'
+import MainHOCCounteWrapper23 from './MainHOCCounte23'
 
 
 class HocHoverCounter23 extends Component {
@@ -15,4 +15,4 @@ class HocHoverCounter23 extends Component {
     }
 }
 
-export default MainHOCCounte23(HocHoverCounter23, 10)
+export default MainHOCCounteWrapper23(HocHoverCounter23, 10)

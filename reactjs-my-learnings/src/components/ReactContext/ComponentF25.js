@@ -11,7 +11,7 @@ class ComponentF25 extends Component {
                         <UserConsumer>
                             {
                                 (myname) => {
-                                    return <div> ComponentF25 :-  MyNmae : <b> {myname} </b> & MyTheme: <b> {mytheme}</b>. (Displaying this name using `UserConsumer` declared in MainContext25.js file and name we passing in App.js file wrapping arond `ConponentC25`)</div>
+                                    return <div> ComponentF25 :-  MyNmae : <b> {myname}  </b> & MyTheme: <b> {mytheme}</b>. (Displaying this name using `UserConsumer` declared in MainContext25.js file and name we passing in App.js file wrapping arond `ConponentC25`)</div>
                                 }
                             }
                         </UserConsumer>

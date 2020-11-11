@@ -1,6 +1,6 @@
 import React from "react";
 
-const MainHOCCounte23 = (WrappedComponent, incrementNumber) => {
+const MainHOCCounteWrapper23 = (WrappedComponent, incrementNumber) => {
     class MainHOCCounteClass extends React.Component {
         constructor(props) {
             super(props)
@@ -27,4 +27,4 @@ const MainHOCCounte23 = (WrappedComponent, incrementNumber) => {
     return MainHOCCounteClass
 }
 
-export default MainHOCCounte23
+export default MainHOCCounteWrapper23
