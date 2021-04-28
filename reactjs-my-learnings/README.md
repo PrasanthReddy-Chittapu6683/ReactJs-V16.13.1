@@ -245,14 +245,16 @@
   * Inn ES6 we can destructing the props and states objects
   * Destructing impoves code readiability
   * Destructing by passing the parameter, instead of using props in FunctionalComponents
-        Ex:const destructing = ({name,heroName }) => {
+    ```javascript
+    const destructing = ({name,heroName }) => {
             retrun(
                 <div>
                     Hi {name} from {heroName}
                 </div>
             )
         }
-    Refer: DestructuringPropsStates7.js
+    ```
+    * Refer: DestructuringPropsStates7.js
 
     
 <a name="Event_Handling "></a>
