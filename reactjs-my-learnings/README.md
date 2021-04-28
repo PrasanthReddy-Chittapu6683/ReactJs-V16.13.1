@@ -794,28 +794,7 @@
       - In `React.createContext()` we can pass default value (`React.createContext('PRCV default value'))
       - In ComponentE25 we used different approach of using Context. But this apprach will work only for Class Compoents and it works for only 1 Context.
       - Multiple context example using in ComponentF25.js
-                        _____
-                        | A |
-         |------------->|___|
-         |                |
-         |                |
-         |                |
-         |                |
-         |                |
-         |                |
-   ______|______        __|__              ____ 
-  | AppComponent |----> | B |------------> | D |
-  |______________|      |___|              |___|
-         |                |
-         |                |
-         |                |
-         |                |
-         |                |
-         |                |
-         |              __|__              _____             _____ 
-         |------------> | C |------------> | E |------------>| F |
-                        | __|              |___|             |___| 
-
+      ![](./images/1.PNG)
 <a name="http"></a>
 ## HTTP:
   * Reac is a library,its not a framework.
