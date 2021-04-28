@@ -405,82 +405,82 @@
 ## Component Lifecycle Methods:
   * For Functional Component we use HOOKS for the life Cycle
   * There are totatl four life cycle methods:
-  #### Updating
-    * When an instance od a omponent is being created and insertd into the DOM
-    * In this stage we have 4 methods:
-      * `constructor(props):`
-        -  Its a special function that get called whenever a new component is created.
-        -  We can use this for initializing state & Binding the event handlers.
-        - We cannot use HTTP calls inside constructor.
-        - WE need call a special class function called `supre(props)`. This is the base class constructor.
-        - After calling the super(props) funcion we can access this.props
-        - Only in constructor we can able to modify the state using this.state. Outside the constructor we are going to use this.setState() only to update the existing state values.
+#### Updating
+  * When an instance od a omponent is being created and insertd into the DOM
+  * In this stage we have 4 methods:
+    * `constructor(props):`
+      -  Its a special function that get called whenever a new component is created.
+      -  We can use this for initializing state & Binding the event handlers.
+      - We cannot use HTTP calls inside constructor.
+      - WE need call a special class function called `supre(props)`. This is the base class constructor.
+      - After calling the super(props) funcion we can access this.props
+      - Only in constructor we can able to modify the state using this.state. Outside the constructor we are going to use this.setState() only to update the existing state values.
 
-      * `static getDerivedStateFromProps(props, state):`
-        - It is used when the state of the component depends on changes in props over time
-        - We can use this function when the initial state of the component is depends on the props being passed to the  component. In that scenario we can -o set the STATE
-        - This is a static method so it doesnot have access to the `this` keyword.
-        - we can simply return the object of the new state to the component.
-        - We cannot use HTTP calls inside constructor.
-                     
-      * render:
-        * Its mandatory method in the component.
-        * In this method we can read the props and state and return JSX/HTML.
-        * We should not change the state of the Compoent and interacting with DOM or making ajax calls.
-        * It contains other children components right after the parent render method, Children render methods are also execut
-      * componentDidMount:
-        * THis called only once on the whole lifecycle of the given component.
-        * It invoked immediately after a component and all its children components have been rendered to the DOM.
-        * This is perfect place to initializing the required DOM nodes and also loads data by making network requests.
-          
-        * Refer: 
-          * MountingLifeCycleA13.js
-          * MountingLifeCycleB13.js
-  #### Updating
-      * When a component is being re-rendered as a reult of changesto either its props or state
-      * In this stage we have 5 methods:
-        * `static getDeriverdStateFromProps(props, state):`
-          * Its a sttic method, which takes input as props and state and returns null or updated object that represents the state of the component.
-          * It will call every time when the component is re-rendered.
-          * This is used when the state depends on the props of the component.    
+    * `static getDerivedStateFromProps(props, state):`
+      - It is used when the state of the component depends on changes in props over time
+      - We can use this function when the initial state of the component is depends on the props being passed to the  component. In that scenario we can -o set the STATE
+      - This is a static method so it doesnot have access to the `this` keyword.
+      - we can simply return the object of the new state to the component.
+      - We cannot use HTTP calls inside constructor.
+                   
+    * render:
+      * Its mandatory method in the component.
+      * In this method we can read the props and state and return JSX/HTML.
+      * We should not change the state of the Compoent and interacting with DOM or making ajax calls.
+      * It contains other children components right after the parent render method, Children render methods are also execut
+    * componentDidMount:
+      * THis called only once on the whole lifecycle of the given component.
+      * It invoked immediately after a component and all its children components have been rendered to the DOM.
+      * This is perfect place to initializing the required DOM nodes and also loads data by making network requests.
+        
+      * Refer: 
+        * MountingLifeCycleA13.js
+        * MountingLifeCycleB13.js
+#### Updating
+  * When a component is being re-rendered as a reult of changesto either its props or state
+  * In this stage we have 5 methods:
+    * `static getDeriverdStateFromProps(props, state):`
+      * Its a sttic method, which takes input as props and state and returns null or updated object that represents the state of the component.
+      * It will call every time when the component is re-rendered.
+      * This is used when the state depends on the props of the component.    
 
-      * `shouldComponentUpdate(nextProps, nextState)`:
-        * This method receives updated props and states.
-        * It dectates the component should re-render or not.
-        * By default all class component will re-render whenever the props they receive or state got changed.
-        * This method can prevent by returning false.
-        * We can compare the exisiting props & state values with the next props & state values and return ture / false that component should update or not.
+  * `shouldComponentUpdate(nextProps, nextState)`:
+    * This method receives updated props and states.
+    * It dectates the component should re-render or not.
+    * By default all class component will re-render whenever the props they receive or state got changed.
+    * This method can prevent by returning false.
+    * We can compare the exisiting props & state values with the next props & state values and return ture / false that component should update or not.
 
-      * `render()`:
-        * Its mandatory method in the component.
-        * In this method we can read the props and state and return JSX/HTML.
-        * We should not change the state of the Compoent and interacting with DOM or making ajax calls.
-        * It contains other children components right after the parent render method, Children render methods are also  executed. 
+  * `render()`:
+    * Its mandatory method in the component.
+    * In this method we can read the props and state and return JSX/HTML.
+    * We should not change the state of the Compoent and interacting with DOM or making ajax calls.
+    * It contains other children components right after the parent render method, Children render methods are also  executed. 
 
-      * `getSnapshotBeforeUpdate(prevProps, prevState)`:
-        * This method receives previous props and previous state as a parameters and its called right before the changes from the virtual DOM are toreflected in DOM.
-        * Capture some information of DOM       
-                -   Ex: like Capture the mouse postion in the browser, etc...
-        * This menthod return null or value. Returned  value will pass as a 3rd parameter to the next menthod componentDidMoun
-      * `componentDidUpdate(prevProps, prevState, snapshot)`:
-        * This will call after the render is finished in re-render lifecycle.
-        * It will accept prevProps, prevState, snapshot
-        * We can make ajax calls, but before calling we need to compare the prevProps and newProps and then decide to make ajax call or not.
-        * Refer: 
-          * UpdatingLifeCycleA14.js
-          * UpdatingLifeCycleB14.js
-  #### `Unmounting`
-       * When a component is beign remove from the DOM
-         * `componentWillUnmount()`:
-            * It invoked immediately when the component is unmount or destroyed.
-            * We can perform some clean up task like removing network requests, removing event handlers etc..,.
-            * Should not do setState().
+  * `getSnapshotBeforeUpdate(prevProps, prevState)`:
+    * This method receives previous props and previous state as a parameters and its called right before the changes from the virtual DOM are toreflected in DOM.
+    * Capture some information of DOM       
+      - Ex: like Capture the mouse postion in the browser, etc...
+    * This menthod return null or value. Returned  value will pass as a 3rd parameter to the next menthod componentDidMoun
+  * `componentDidUpdate(prevProps, prevState, snapshot)`:
+    * This will call after the render is finished in re-render lifecycle.
+    * It will accept prevProps, prevState, snapshot
+    * We can make ajax calls, but before calling we need to compare the prevProps and newProps and then decide to make ajax call or not.
+    * Refer: 
+      * UpdatingLifeCycleA14.js
+      * UpdatingLifeCycleB14.js
+#### `Unmounting`
+  * When a component is beign remove from the DOM
+    * `componentWillUnmount()`:
+       * It invoked immediately when the component is unmount or destroyed.
+       * We can perform some clean up task like removing network requests, removing event handlers etc..,.
+       * Should not do setState().
 
-        * Error Handling
-            * When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
-              - static getDerivedStateFromError(error):
-              - componentDidCatch(error, info)
-            * Above two methods will call when there is an error during renderign, in lifecycle method, or in the constructor of any child component.
+  * Error Handling
+    * When there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+      - static getDerivedStateFromError(error):
+      - componentDidCatch(error, info)
+    * Above two methods will call when there is an error during renderign, in lifecycle method, or in the constructor of any child component.
 
 
 <a name="ReactFragments"></a>
@@ -599,30 +599,30 @@
     ```
 <a name="RefswithClassComponents"></a>
 ## Refs with Class Components:
-    ```javascript 
-    RefswithClassComponents19.js
-        constructor(props) {
-                super(props)
-                this.inputRef = React.createRef();
-            }
-            <input type="text" ref={this.inputRef} />
-            focusInput = () => {
-                    this.inputRef.current.focus();
-            }
-        FocusInput19.js
-            constructor(props) {
-                super(props)
-                this.compoentRef = React.createRef();
-            }
-        clickHandler = () => {
-                //focusInput() is defined inside child component RefswithClassComponents19.js
-                this.compoentRef.current.focusInput();
-            }
-        <div>
-          <RefswithClassComponents19 ref={this.compoentRef} />
-          <button onClick={this.clickHandler}> Click to  Focus on Input</button>
-        </div>
-      ```
+  * RefswithClassComponents19.js
+  ```javascript 
+      constructor(props) {
+              super(props)
+              this.inputRef = React.createRef();
+          }
+          <input type="text" ref={this.inputRef} />
+          focusInput = () => {
+                  this.inputRef.current.focus();
+          }
+      FocusInput19.js
+          constructor(props) {
+              super(props)
+              this.compoentRef = React.createRef();
+          }
+      clickHandler = () => {
+              //focusInput() is defined inside child component RefswithClassComponents19.js
+              this.compoentRef.current.focusInput();
+          }
+      <div>
+        <RefswithClassComponents19 ref={this.compoentRef} />
+        <button onClick={this.clickHandler}> Click to  Focus on Input</button>
+      </div>
+  ```
 <a name="ForwardingRefs"></a>
 ## Forwarding Refs:
   * Its technique for automatically Forwarding the ref throught component to one of the  childern.
