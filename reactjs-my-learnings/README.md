@@ -809,11 +809,9 @@
     * GetList26.js
     * PostForm26.js
 
-***************This is the basic React Features covered as per the React Offical doumentation *********************
-*************** Next will Go to React HOOKS *********************
 
  
-
+_______________________________________________________________________________________________________________________________
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
