@@ -226,7 +226,7 @@
             )
     ```
   * If we add multiple setState() objects it will group to single setState() object while executing.
-       ```javascript
+      ```javascript
              IncFive = () => {
                 this.IncFiveTimes();
                 this.IncFiveTimes();
@@ -234,15 +234,15 @@
                 this.IncFiveTimes();
                 this.IncFiveTimes();
             }
-        ```
+      ```
   * If we need to call and execute inside code all 5 times we need to pass an argument instead of regular object, below syntax:
-        ```javascript
-             IncFiveTimes = () => {
-                this.setState(prevState => ({
-                    count: prevState.count + 1
-                }))
-            }
-        ```
+      ```javascript
+        IncFiveTimes = () => {
+            this.setState(prevState => ({
+                count: prevState.count + 1
+            }))
+        }
+      ```
 
 <a name="Destructing"></a>
 ## Destructing props and state:
@@ -258,33 +258,37 @@
             )
         }
     ```
-    * Refer: `DestructuringPropsStates7.js`
+  * Refer: `DestructuringPropsStates7.js`
 
     
 <a name="Event_Handling "></a>
 ## Event Handling:
-  *  render() {
-            return (
-                <div>
-                    <button onClick={() => this.onclickeve()}>click</button>
-                    <div>{this.state.message}</div>
-                </div>
-            )
-         }
+  ```javascript
+    render() {
+      return (
+              <div>
+                  <button onClick={() => this.onclickeve()}>click</button>
+                  <div>{this.state.message}</div>
+              </div>
+          )
+      }
 
-        onclickeve = () => {
-            console.log("Hi, ClassComp Click event")
-            this.setState({
-                message :' Good bye'
-            })
-        }
-    Refer: EventHandling8.js
+      onclickeve = () => {
+          console.log("Hi, ClassComp Click event")
+          this.setState({
+              message :' Good bye'
+          })
+      }
+    }
+  ```
+  * Refer: `EventHandling8.js`
 
 <a name="Methods_as_props"></a>
 ## Methods as props:
   * How to pass data or call the function from child  copoment to parent component using props?
-    Refer: MethodsAsPropsParent9.js
-           MethodsAsPropsChild9.js
+  * Refer: 
+    * `MethodsAsPropsParent9.js`
+    * `MethodsAsPropsChild9.js`
 
 <a name=" Conditional_Rending"></a>
 ## Conditional Rending:
