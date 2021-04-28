@@ -71,23 +71,22 @@
         1) Stateless Functional Component:
         *  This are JavaScript functions.
         * It returns HTML code to display in UI
-                Ex:
-                ```javascript
-                    function welcome(props) {
-                        return `<h1> Hello, {props.name} </h1>
-                    }
-                ```
+        ```javascript
+        function welcome(props) {
+          return `<h1> Hello, {props.name} </h1>
+        }
+        ```
         2) Stateful Class Component:
         * Its a regular ES6 class that extends `React.Component` class.
         * `render` method is manditory to return HTML.
                 Ex:
-                ```javascript
-                    class welcome extends React.Component {
-                        render()  {
-                            return `<h1>Hi PRCV</h1>`;
-                        }
-                    }
-                ```
+         ```javascript
+         class welcome extends React.Component {
+            render()  {
+              return `<h1>Hi PRCV</h1>`;
+            }
+         }
+         ```
 <a name="Functional_Components"></a>
 ## Functional Components:(Stateless / Dumb / Presentational Components)
   * These are just JavaScript function.
@@ -110,15 +109,15 @@
   * It also receives the input Properties called as `props` and returns the output as HTML(JSX).
   * Apart from props, this class contains private Internal states(means, This class contains its private information which can use to display in the UI).
 	* While creating the class Component we need to import two classes from react
-       ```javascript
-                    import React, {Component} from 'react';
-      ```
+  ```javascript
+  import React, {Component} from 'react';
+  ```
   * Class should export Component
-        ```javascript
-            class ClassComponentTwo extends Component {
+    ```javascript
+    class ClassComponentTwo extends Component {
             
-            }
-        ```
+    }
+    ```
   * Class has to implement render() which returns null or HTML
   * There are bit more Feature Rich.
   * Here we can maintain thier own private data also called as `state`.
