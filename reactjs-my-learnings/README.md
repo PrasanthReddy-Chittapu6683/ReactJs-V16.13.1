@@ -68,25 +68,24 @@
   * Reusable
   * Component code place the code in JavaScript file(App.js). We can have Component with .JSX file extensions.
   * We have two different types of Components:
-        1) Stateless Functional Component:
-        *  This are JavaScript functions.
-        * It returns HTML code to display in UI
-        ```javascript
-        function welcome(props) {
-          return `<h1> Hello, {props.name} </h1>
-        }
-        ```
-        2) Stateful Class Component:
-        * Its a regular ES6 class that extends `React.Component` class.
-        * `render` method is manditory to return HTML.
-                Ex:
+    - Stateless Functional Component:
+       *  This are JavaScript functions.
+       * It returns HTML code to display in UI
          ```javascript
-         class welcome extends React.Component {
-            render()  {
-              return `<h1>Hi PRCV</h1>`;
-            }
+         function welcome(props) {
+         	return `<h1> Hello, {props.name} </h1>
          }
          ```
+     - Stateful Class Component:
+       * Its a regular ES6 class that extends `React.Component` class.
+       * `render` method is manditory to return HTML.
+          ```javascript
+          class welcome extends React.Component {
+             render()  {
+               return `<h1>Hi PRCV</h1>`;
+             }
+          }
+          ```
 <a name="Functional_Components"></a>
 ## Functional Components:(Stateless / Dumb / Presentational Components)
   * These are just JavaScript function.
@@ -108,16 +107,16 @@
   * These are basically ES6 classes
   * It also receives the input Properties called as `props` and returns the output as HTML(JSX).
   * Apart from props, this class contains private Internal states(means, This class contains its private information which can use to display in the UI).
-	* While creating the class Component we need to import two classes from react
+  * While creating the class Component we need to import two classes from react
   ```javascript
   import React, {Component} from 'react';
   ```
   * Class should export Component
-    ```javascript
-    class ClassComponentTwo extends Component {
+  ```javascript
+  class ClassComponentTwo extends Component {
             
-    }
-    ```
+  }
+  ```
   * Class has to implement render() which returns null or HTML
   * There are bit more Feature Rich.
   * Here we can maintain thier own private data also called as `state`.
@@ -150,14 +149,14 @@
                 )
             ```
         JavaScript Syntax:
-          ``` javascript
+            ``` javascript
              return React.createElement('div',
                 { id: 'PRCV', className: 'dummyClass' },
                 React.createElement(
                     'b',
                     null,
                     "This is from JavaScript return function: Inspect this line for added the attributesfor this element"));
-          ```
+             ```
 <a name="props"></a>
 ## Props (Properties):
   * Compoents are reusable by importig Compoent from 'react'
@@ -926,8 +925,8 @@ It contails 3 files.
   * Component code place the code in JavaScript file(App.js). We can have Component with .JSX file extensions.
   * We have 2 different types of Components:
       1) __`Stateless Functional Component`__:
-      * This are JavaScript functions.
-      * It returns HTML code to display in UI
+      	* This are JavaScript functions.
+      	* It returns HTML code to display in UI
             Ex:
             ```javascript
                     function welcome(props) {
@@ -935,7 +934,7 @@ It contails 3 files.
                     }
             ```javascript
       2) __`Stateful Class Component`__:
-      *  Its a regular ES6 class that extends `React.Component` class.
+      	*  Its a regular ES6 class that extends `React.Component` class.
         * `render` method is manditory to return HTML.
               ```javascript  
               
