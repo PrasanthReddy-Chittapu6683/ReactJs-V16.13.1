@@ -134,66 +134,66 @@
   * JSX make react code simplier and easy.
   * JSX ultimately transpiles to pure JavaScript which is understood by the browsers.
   * In JSX some of the things got replaced compare the JavaScript ie.,
-        - Class => className
-        - for => htmlFor
+        - Class => `className`
+        - for => `htmlFor`
         - camelCase prorperty naming convention
-       * onclick => onClick
-       * tabindex => tabIndex 
-    Refer: FunctionalComponentOne.js
-        JSX Syntax:
-            ``` javascript
-              return (
-                  <div className="dummyClass">
-                      <p> This is from JSX retrun function.</p>
-                  </div>
-                )
-            ```
-        JavaScript Syntax:
-            ``` javascript
-             return React.createElement('div',
-                { id: 'PRCV', className: 'dummyClass' },
-                React.createElement(
-                    'b',
-                    null,
-                    "This is from JavaScript return function: Inspect this line for added the attributesfor this element"));
-             ```
+       * onclick => `onClick`
+       * tabindex => `tabIndex` 
+  * Refer: `FunctionalComponentOne.js`
+      - JSX Syntax:
+        ``` javascript
+          return (
+              <div className="dummyClass">
+                  <p> This is from JSX retrun function.</p>
+              </div>
+            )
+        ```
+      - JavaScript Syntax:
+        ``` javascript
+         return React.createElement('div',
+            { id: 'PRCV', className: 'dummyClass' },
+            React.createElement(
+                'b',
+                null,
+                "This is from JavaScript return function: Inspect this line for added the attributesfor this element"));
+        ```
 <a name="props"></a>
 ## Props (Properties):
   * Compoents are reusable by importig Compoent from 'react'
   * Props are optional input that Compoent can accept.
   * Props can allows the Compoent to be dynamic.
   * Props is readonly property. Cannot change or assign the value in Component class.
-    Refer: PropsFour.js
-        Ex:
-            In HTML add the attributes:
+  * Refer: `PropsFour.js`
+    - Ex: In HTML add the attributes:
+      ``` javascript
              <PropsComponent name='PRCV'></PropsComponent>
-            In Compoents add the parameters to the class `props`. In `props` will have HTML element attribute details
-              ```javascript 
-                const PropsComponent = (props) => {
-                    return <div> Hi <b> {props.name}</b>,This is displaying using the name attribute in HTML and reading using `props` in component : </div>
-                }
-              ```
+      ```
+    - In Compoents add the parameters to the class `props`. In `props` will have HTML element attribute details
+      ```javascript 
+        const PropsComponent = (props) => {
+            return <div> Hi <b> {props.name}</b>,This is displaying using the name attribute in HTML and reading using `props` in component : </div>
+        }
+      ```
   * Using props, we can read the child element which is inside the component class name element
-        Ex:
-            Html:
-               ```javascript
-                 <PropsComponent name='Tanxz' turotrialName="Vue">
-                    <p>
-                        This is childern Props
-                    </p>
-                </PropsComponent>      
-              ```
-            Compoent Class:
-              ```javascript
-                const PropsComponent = (props) => {
-                    return (<div> Hi
-                        <b> {props.name}</b>,
-                        This is displaying using the name attribute in HTML and reading using `props` in component using
-                        <b> {props.turotrialName} </b>
-                        {props.children}
-                    </div>);
-                }
-              ```
+    - Ex: Html:
+         ```javascript
+           <PropsComponent name='Tanxz' turotrialName="Vue">
+              <p>
+                  This is childern Props
+              </p>
+          </PropsComponent>      
+        ```
+    - Compoent Class:
+        ```javascript
+          const PropsComponent = (props) => {
+              return (<div> Hi
+                  <b> {props.name}</b>,
+                  This is displaying using the name attribute in HTML and reading using `props` in component using
+                  <b> {props.turotrialName} </b>
+                  {props.children}
+              </div>);
+          }
+        ```
 
 <a name="state"></a>
 ## State: 
