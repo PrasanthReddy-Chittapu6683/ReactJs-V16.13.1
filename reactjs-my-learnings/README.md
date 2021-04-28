@@ -134,9 +134,9 @@
   * JSX make react code simplier and easy.
   * JSX ultimately transpiles to pure JavaScript which is understood by the browsers.
   * In JSX some of the things got replaced compare the JavaScript ie.,
-        - Class => `className`
-        - for => `htmlFor`
-        - camelCase prorperty naming convention
+       * Class => `className`
+       * for => `htmlFor`
+  * camelCase prorperty naming convention
        * onclick => `onClick`
        * tabindex => `tabIndex` 
   * Refer: `FunctionalComponentOne.js`
@@ -203,19 +203,20 @@
   * Functional Compoents: useState Hook.
   * Class Compoents: this.state.
   * this.state can be used only in costructor to initialize the value or property.
-    Refer: stateExampleFive.js
+  * Refer: `stateExampleFive.js`
 
 <a name="setState"></a>
 ## setState:
   * This is used to update or change the value of state using setState function
-        Ex:
+    ```javascript
              this.setState({
                 count: this.state.count + 1
             })
+    ```
   * Suppose, if we want to update any code after executing the setState method, we have two parameters in setState   
-        1st parameter: to set the values
-        2nd parameter: set callback
-        Ex:
+    - 1st parameter: to set the values
+    - 2nd parameter: set callback
+    ```javascript
             this.setState({
                 count: this.state.count + 1
             },
@@ -223,8 +224,9 @@
                     console.log('Call Back')
                 }
             )
+    ```
   * If we add multiple setState() objects it will group to single setState() object while executing.
-        Ex:
+       ```javascript
              IncFive = () => {
                 this.IncFiveTimes();
                 this.IncFiveTimes();
@@ -232,13 +234,15 @@
                 this.IncFiveTimes();
                 this.IncFiveTimes();
             }
+        ```
   * If we need to call and execute inside code all 5 times we need to pass an argument instead of regular object, below syntax:
-        Ex:
+        ```javascript
              IncFiveTimes = () => {
                 this.setState(prevState => ({
                     count: prevState.count + 1
                 }))
             }
+        ```
 
 <a name="Destructing"></a>
 ## Destructing props and state:
@@ -254,7 +258,7 @@
             )
         }
     ```
-    * Refer: DestructuringPropsStates7.js
+    * Refer: `DestructuringPropsStates7.js`
 
     
 <a name="Event_Handling "></a>
